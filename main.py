@@ -52,7 +52,7 @@ def send_email(body: str, image_file: UploadFile = None):
     return response.status_code
 
 # ---------------------- FASTAPI ROUTE ----------------------
-@app.post("/")
+@app.post("/send-report")
 async def send_report(
     name: str = Form(...),
     email: str = Form(...),
